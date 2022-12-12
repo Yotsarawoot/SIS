@@ -1,0 +1,31 @@
+{% extends 'general/components/base.html' %}
+
+{% block content %}
+<div>
+    <h1 class="text_center">GPA & Grade</h1>
+    <div class="box center">
+        <div class="mode"><h4 class="text_center"><a href="{% url 'home' %}">GPA</a></h4></div>
+        <div class="mode"><h4 class="text_center"><a href="">Grade</a></h4></div>
+    </div>
+    <h1 class="text_center">Grade</h1>
+    <div class="box center">
+        <div class="mode"><h4 class="text_center"><a href="{% url 'home2' %}">Specific</a></h4></div>
+        <div class="mode"><h4 class="text_center"><a href="">History</a></h4></div>
+    </div>
+    <div class="box center">
+        <form action="{% url 'home3' %}" method="post">
+            {% csrf_token %}
+            <div style="margin-bottom: 16px;">
+                {{ form.sID.label_tag }}
+                {{ form.sID }}
+            </div>
+            <div>
+                <button type="submit"></button>
+            </div>
+        </form>
+        {% for x in grade %}
+        <p>{{ x }}</p>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

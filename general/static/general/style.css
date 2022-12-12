@@ -1,0 +1,19 @@
+.mode{
+    width:49%; 
+    margin: auto;
+    padding: auto;
+    display: inline-block;
+}
+
+.box{
+    outline-style: solid;
+}
+
+.center {
+    margin-left: 24%;
+    margin-right: 24%;
+}
+
+.text_center{
+    text-align: center;
+}
